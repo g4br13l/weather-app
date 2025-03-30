@@ -1,38 +1,46 @@
-import { StrictMode } from 'react'
+import { scan } from 'react-scan'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider, createRouter } from '@tanstack/react-router'
 
-// Import the generated route tree
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { routeTree } from './routeTree.gen'
 
 import './styles.css'
 import reportWebVitals from './reportWebVitals.ts'
 
-// Create a new router instance
+
+
+scan({ enabled: true })
+
+const queryClient = new QueryClient({
+  defaultOptions: {},
+})
+
 const router = createRouter({
   routeTree,
-  context: {},
+  context: { queryClient },
   defaultPreload: 'intent',
   scrollRestoration: true,
   defaultStructuralSharing: true,
   defaultPreloadStaleTime: 0,
 })
 
-// Register the router instance for type safety
 declare module '@tanstack/react-router' {
   interface Register {
     router: typeof router
   }
 }
 
-// Render the app
 const rootElement = document.getElementById('app')
+
 if (rootElement && !rootElement.innerHTML) {
   const root = ReactDOM.createRoot(rootElement)
   root.render(
-    <StrictMode>
+    /* <StrictMode> */
+    <QueryClientProvider client={queryClient}>
       <RouterProvider router={router} />
-    </StrictMode>,
+    </QueryClientProvider>,
+    /* </StrictMode> */
   )
 }
 

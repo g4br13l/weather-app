@@ -6,9 +6,10 @@ const config = {
   singleQuote: true,
   trailingComma: 'all',
   endOfLine: 'lf',
-  bracketSameLine: true,
+  bracketSameLine: false,
   experimentalOperatorPosition: 'start',
   printWidth: 100,
+  singleAttributePerLine: true,
   /* eslintIntegration: true, */
 }
 
