@@ -5,25 +5,25 @@ import { TopMenu } from '@/components/layout/topMenu'
 
 
 
-export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
-  {
-    component: RootComponent,
-  },
-)
+export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
+  component: RootComponent,
+})
 
 function RootComponent() {
+
   return (
+    <main className="f-col w-full items-center">
+      <div className="f-col w-full max-w-7xl">
 
-    <main id="main" className="f-col w-full">
+        <TopMenu />
 
-      <TopMenu />
+        <h3>Root Component</h3>
 
-      <h3>Root Component</h3>
+        <Outlet />
 
-      <Outlet />
+      </div>
 
       <TanStackRouterDevtools />
     </main>
-
   )
 }

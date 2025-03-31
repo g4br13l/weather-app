@@ -105,13 +105,13 @@
 
 /*.dark {*/
 :root {
-  --background: oklch(13% 0.050 262);
+  --background: oklch(0.294 0.055 222.661);
   --foreground: oklch(98.4% 0.002 248);
   --card: oklch(12.9% 0.027 262);
   --card-foreground: oklch(98.4% 0.002 248);
   --popover: oklch(12.9% 0.027 262);
   --popover-foreground: oklch(98.4% 0.002 248);
-  --primary: oklch(0.39 0.208 293.376);
+  --primary: oklch(0.52 0.105 223.128);
   --primary-foreground: oklch(98.4% 0.002 248);
   --secondary: oklch(27.8% 0.03 257);
   --secondary-foreground: oklch(98.4% 0.002 248);
@@ -130,7 +130,7 @@
   --chart-3: oklch(72.3% 0.15 60.6);
   --chart-4: oklch(61.9% 0.204 313);
   --chart-5: oklch(61.2% 0.209 6.39);
-  --sidebar: oklch(0.187 0.057 284.175);
+  --sidebar: oklch(0.256 0.047 221.018);
   --sidebar-foreground: oklch(0.984 0.003 247.858);
   --sidebar-primary: oklch(0.488 0.243 264.376);
   --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
@@ -139,7 +139,6 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
-
 
 
 @theme inline {
@@ -181,12 +180,27 @@
 }
 
 
+@layer components {
+
+  .high-temp-day {
+    @apply bg-linear-to-br/oklch from-blue-600 via-cyan-600 to-blue-600
+  }
+
+  .mid-temp-day {
+
+  }
+
+  .low-temp-day {
+    @apply bg-linear-to-br/oklch from-blue-600 via-cyan-600 to-blue-600
+  }
+
+}
 
 
 @layer base {
 
   * {
-    @apply border-border outline-ring/50 selection:bg-violet-900;
+    @apply border-border outline-ring/50 selection:bg-cyan-900;
   }
 
   html {
@@ -199,12 +213,8 @@
 
 
 
-  #root {
+  #app {
     @apply h-svh w-full min-w-fit
-  }
-
-  #main div {
-    @apply w-full
   }
 
 
@@ -218,23 +228,23 @@
   }
 
   h2, .h2 {
-    @apply scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0
+    @apply scroll-m-20 pb-2 text-4xl font-semibold tracking-tight first:mt-0
   }
 
   h3, .h3 {
-    @apply scroll-m-20 text-2xl font-semibold tracking-tight
+    @apply scroll-m-20 text-3xl font-semibold tracking-tight
   }
 
   h4, .h4 {
-    @apply scroll-m-20 text-xl font-semibold tracking-tight
+    @apply scroll-m-20 text-2xl font-semibold tracking-tight
   }
 
   h5, .h5 {
-    @apply scroll-m-20 text-lg font-semibold
+    @apply scroll-m-20 text-xl font-semibold
   }
 
   h6, .h6 {
-    @apply scroll-m-20 text-sm text-muted-foreground
+    @apply scroll-m-20 text-lg text-muted-foreground
   }
 
   p, .p {
@@ -246,7 +256,7 @@
   }
 
   small, .small {
-    @apply text-sm font-medium leading-none
+    @apply text-sm font-normal leading-none
   }
 
   blockquote, .blockquote {
@@ -296,7 +306,7 @@
   }
 
   .main-container {
-    @apply flex flex-1 items-center max-w-7xl gap-4 px-4
+    @apply flex flex-1 w-full items-center max-w-7xl gap-4 px-4
   }
 
   /*body {

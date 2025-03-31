@@ -2,6 +2,10 @@
 
 /** @type {import('prettier').Config} */
 const config = {
+  plugins: ['prettier-plugin-tailwindcss'],
+  tailwindStylesheet: './src/styles.css',
+  tailwindFunctions: ['tw', 'clsx', 'cn', 'cva'],
+
   semi: false,
   singleQuote: true,
   trailingComma: 'all',
@@ -9,7 +13,7 @@ const config = {
   bracketSameLine: false,
   experimentalOperatorPosition: 'start',
   printWidth: 100,
-  singleAttributePerLine: true,
+  singleAttributePerLine: false,
   /* eslintIntegration: true, */
 }
 

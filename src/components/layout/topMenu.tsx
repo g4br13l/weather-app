@@ -7,7 +7,7 @@ import logoImg from '@/../public/logo/Weather-1.png'
 export function TopMenu() {
   return (
     <div className="w-full sticky top-0 z-50 f-col-center h-16 bg-sidebar">
-      <div className="main-container f-row h-16 bg-sidebar">
+      <div className="f-row flex-1 w-full max-w-7xl items-center h-16 bg-sidebar">
         <img
           className="w-32 h-full object-contain"
           src={logoImg}
