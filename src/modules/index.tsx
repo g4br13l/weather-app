@@ -1,14 +1,10 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
-import CONDITIONS = Condition.CONDITIONS
-import type {LocationT} from '@/modules/location/.main/location.entity';
-import type { WeatherT } from '@/modules/weather/.main/weather.entity'
 import { Location  } from '@/modules/location/.main/location.entity'
 import { Button } from '@/components/base/button'
 import { WeatherCard } from '@/modules/weather/.ui/weatherCard'
 import { weatherService } from '@/modules/weather/.main/weather.service'
-import { Condition } from '@/main/type/conditions'
 
 
 
@@ -20,7 +16,7 @@ function App() {
   const CITIES = Location.CITIES
   type CityT = Location.CityT
 
-  const location: LocationT = {
+  /* const location: LocationT = {
     country: 'Brazil',
     city: 'Joinville',
   }
@@ -30,7 +26,7 @@ function App() {
     windSpeed: 10,
     humidity: 60,
     pressure: '1 015 hPa',
-  }
+  } */
 
   const [selectedCityId, setSelectedCityId] = useState<CityT['id']>(1)
   const selectedCity = Location.getCityById(selectedCityId)
@@ -75,7 +71,7 @@ function App() {
         />
       )}
 
-      <div className="f-row gap-4">
+      {/* <div className="f-row gap-4">
         <WeatherCard
           period="day"
           climate="cold"
@@ -120,7 +116,7 @@ function App() {
           location={location}
           weather={weather}
         />
-      </div>
+      </div> */}
     </section>
   )
 }
