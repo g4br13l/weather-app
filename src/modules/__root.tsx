@@ -14,8 +14,8 @@ function RootComponent() {
   return (
     <main className="f-col w-full items-center">
 
-      <div className="f-col mb-32 w-full max-w-7xl">
-        <TopMenu />
+      <TopMenu />
+      <div className="f-col mb-32 mx-6 w-full max-w-7xl">
         <Outlet />
       </div>
 
