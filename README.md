@@ -3,6 +3,8 @@
 The Weather App gets API climate data and shows the most updated information at its location.<br/>
 It was made using React, Tanstack Query, Tanstack Router, Tailwind, and ShadcnUI.
 
+https://github.com/user-attachments/assets/479edf65-64e0-404e-803b-07e224805e50
+
 
 ## WeatherCard Component
 The main application component includes a light mode for daytime use and a 
