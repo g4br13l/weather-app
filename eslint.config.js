@@ -19,6 +19,10 @@ export default [
       'react-compiler/react-compiler': 'warn',
       'import/newline-after-import': ['warn', { count: 3 }],
       'no-multiple-empty-lines': ['warn', { max: 3, maxEOF: 1, maxBOF: 3 }],
+      '@typescript-eslint/no-namespace': ['off']
+      /* '@typescript-eslint/naming-convention': ['warn', {
+
+      }] */
     }
   }
 ]

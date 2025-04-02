@@ -1,6 +1,4 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@radix-ui/react-avatar'
-import userImg from '@/../public/default-avatar.png'
-import logoImg from '@/../public/logo/Weather-1.png'
 
 
 
@@ -10,7 +8,7 @@ export function TopMenu() {
       <div className="f-row flex-1 w-full max-w-7xl items-center h-16 bg-sidebar">
         <img
           className="w-32 h-full object-contain"
-          src={logoImg}
+          src="/logo/Weather-1.png"
           alt="Weather logo"
         />
 
@@ -27,7 +25,7 @@ export function TopMenu() {
           <Avatar className="w-10 h-10">
             <AvatarImage
               className="rounded-full cursor-pointer"
-              src={userImg}
+              src="/user/default-avatar.png"
               alt="user photo"
             />
             <AvatarFallback>CN</AvatarFallback>

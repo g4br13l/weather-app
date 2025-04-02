@@ -33,6 +33,7 @@
     "@tanstack/eslint-config": "^0.1.0",
     "@tanstack/eslint-plugin-query": "^5.68.0",
     "@tanstack/eslint-plugin-router": "^1.114.29",
+    "@tanstack/react-query-devtools": "^5.71.2",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/react": "^16.2.0",
     "@types/node": "^22.13.14",

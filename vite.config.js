@@ -17,6 +17,16 @@ export default defineConfig({
     viteReact(),
     tailwindcss(),
   ],
+  server: {
+    proxy: {
+      /* 'weatherAPI': 'http://api.openweathermap.org' */
+      '/weatherAPI': {
+        target: 'http://api.openweathermap.org',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/weatherAPI/, '')
+      }
+    }
+  },
   test: {
     globals: true,
     environment: 'jsdom',
